@@ -52,8 +52,16 @@
     }
 
     function showGame() {
+      // Show the game
       document.getElementById('game-container').style.display = 'block';
+      
+      // Hide the review section if it's open
+      const r = document.getElementById('review');
+      if (r.style.display === 'block') {
+        r.style.display = 'none';
+      }
     }
+
   </script>
 </head>
 <body>
