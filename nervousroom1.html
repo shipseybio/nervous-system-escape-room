@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Room 1 – Nervous System Divisions</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #f0f6fc;
+      font-family: 'Orbitron', sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      color: #58a6ff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .button {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #21262d;
+      color: #58a6ff;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background-color: #1f6feb;
+      color: white;
+    }
+    .review {
+      display: none;
+      background: #161b22;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+    }
+  </style>
+  <script>
+    function toggleReview() {
+      const r = document.getElementById('review');
+      r.style.display = (r.style.display === 'none') ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <h1>🧠 Room 1: Nervous System Divisions</h1>
+  <p>Stop the neurotoxin. Begin by identifying the correct divisions of the nervous system.</p>
+
+  <a class="button" onclick="toggleReview()">🧬 Quick Review</a>
+  <a class="button" href="#game">🚀 Start Challenge</a>
+
+  <div id="review" class="review">
+    <p><strong>Central Nervous System:</strong> Brain and spinal cord – the control center.</p>
+    <p><strong>Peripheral Nervous System:</strong> Nerves branching off the CNS.</p>
+    <p><strong>Somatic:</strong> Voluntary control (skeletal muscles).</p>
+    <p><strong>Autonomic:</strong> Involuntary control (organs, glands).</p>
+    <p><strong>Sympathetic:</strong> Emergency response – fight or flight.</p>
+    <p><strong>Parasympathetic:</strong> Calming – rest and digest.</p>
+  </div>
+
+  <hr style="margin: 3rem 0; border: 0; border-top: 1px solid #30363d;" id="game">
+
+  <!-- H5P Embed -->
+  <iframe src="nervous-room1-drag-the-words.h5p" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+
+  <br><br>
+  <a class="button" href="room2.html">🔓 Continue to Room 2</a>
+</body>
+</html>
