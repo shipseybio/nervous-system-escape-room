@@ -40,11 +40,18 @@
       border: 1px solid #30363d;
       border-radius: 8px;
     }
+    #game-container {
+      display: none;
+    }
   </style>
   <script>
     function toggleReview() {
       const r = document.getElementById('review');
       r.style.display = (r.style.display === 'none') ? 'block' : 'none';
+    }
+    
+    function showGame() {
+      document.getElementById('game-container').style.display = 'block';  // Show the iframe
     }
   </script>
 </head>
@@ -53,20 +60,20 @@
   <p>Stop the neurotoxin. Begin by identifying the correct divisions of the nervous system.</p>
 
   <a class="button" onclick="toggleReview()">🧬 Quick Review</a>
-  <a class="button" href="#game">🚀 Start Challenge</a>
+  <a class="button" href="javascript:void(0);" onclick="showGame()">🚀 Start Challenge</a>
 
   <div id="review" class="review">
-    <p><strong>Central Nervous System:</strong> Brain and spinal cord – the control center.</p>
-    <p><strong>Peripheral Nervous System:</strong> Nerves branching off the CNS.</p>
+    <p><strong>CNS:</strong> Brain and spinal cord – the control center.</p>
+    <p><strong>PNS:</strong> Nerves branching off the CNS.</p>
     <p><strong>Somatic:</strong> Voluntary control (skeletal muscles).</p>
     <p><strong>Autonomic:</strong> Involuntary control (organs, glands).</p>
     <p><strong>Sympathetic:</strong> Emergency response – fight or flight.</p>
     <p><strong>Parasympathetic:</strong> Calming – rest and digest.</p>
   </div>
 
-  <hr style="margin: 3rem 0; border: 0; border-top: 1px solid #30363d;" id="game">
-
-  <!-- H5P Embed -->
+  <hr style="margin: 3rem 0; border: 0; border-top: 1px solid #30363d;" id="game-container">
+  
+  <!-- H5P Embed (initially hidden until the button is clicked) -->
   <iframe src="nervous-room1-drag-the-words.h5p" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
 
   <br><br>
